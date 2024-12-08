@@ -1,0 +1,2408 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+    <link rel="stylesheet" href="/style.css" />
+    <script src="/tailwind.js"></script>
+    <script src="/tailwind.config.js"></script>
+    <script src="/components/courseModules.js"></script>
+    <script src="/components/timer.js"></script>
+  </head>
+
+  <body>
+    <section class="bg-[#0A1A2F] relative">
+      <!-- Cyber Monday Banner -->
+      <div
+        class="bg-[#BFFFD1] z-50 fixed top-0 w-full py-2 px-4 flex justify-center items-center text-sm gap-2"
+      >
+        <span
+          >Offer Ends in
+          <span class="font-bold" id="countdown">23h 59m 59s</span></span
+        >
+        <!-- <button class="ml-2 text-lg">&times;</button> -->
+      </div>
+
+      <!-- Navigation -->
+      <!-- <nav class="bg-white py-3 px-4 shadow-lg">
+        <div class="container mx-auto flex justify-between items-center">
+          <img src="/public/logo.png" alt="Logo" class="h-12" />
+          <div class="flex items-center gap-6">
+            <a href="#" class="text-gray-600">Pricing</a>
+            <a href="#" class="text-gray-600">Features</a>
+            <a href="#" class="text-gray-600">Support</a>
+            <button class="bg-blue-500 text-white px-4 py-2 rounded-full">
+              Enroll Now
+            </button>
+          </div>
+        </div>
+      </nav> -->
+      <header>
+        <nav class="p-4 w-full z-50 bg-white mt-12">
+          <div class="container mx-auto flex justify-between items-center">
+            <!-- Logo -->
+            <div class="text-white text-2xl font-bold">
+              <img src="/public/logo.png" alt="Elance Plus" class="w-32" />
+            </div>
+
+            <!-- Links (hidden on mobile) -->
+
+            <!-- Get in Touch Button (hidden on mobile) -->
+            <div class="block">
+              <a
+                href="#contact"
+                class="bg-btnAccent text-white p-4 rounded-full hover:bg-blue-600"
+                >Enroll Now</a
+              >
+            </div>
+          </div>
+
+          <!-- Mobile Menu (hidden by default) -->
+          <div
+            id="mobile-menu"
+            class="lg:hidden hidden flex flex-col space-y-4 mt-4"
+          >
+            <a
+              href="#contact"
+              class="bg-[#519FDE] text-white p-3 rounded-full hover:bg-blue-600 inline-block w-28"
+              onClick="toggleNavBar()"
+              >Enroll Now</a
+            >
+          </div>
+        </nav>
+      </header>
+
+      <!-- Hero Section -->
+      <div class="container mx-auto px-4 relative h-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <!-- Left Content - 7 columns -->
+          <div class="lg:col-span-7 py-12 lg:py-20">
+            <h1
+              class="text-xl lg:text-4xl font-bold text-white mb-4 leading-tight"
+            >
+              Mastering UAE Corporate Tax:<br />
+              The Ultimate 16-Hour Expert Guide
+            </h1>
+            <p class="text-gray-400 mb-8 lg:text-lg">
+              Stay ahead of the curve with our comprehensive UAE Corporate Tax
+              Masterclass—your ultimate toolkit for navigating tax laws with
+              confidence and precision.
+            </p>
+
+            <div class="flex gap-8 mb-8 text-gray-300">
+              <div class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-green-400"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+                  />
+                </svg>
+                <span class="text-green-400">In just 16 Hours</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <span>21000. - 11999</span>
+              </div>
+              <div class="flex items-center gap-2">
+                <svg
+                  class="w-5 h-5 text-yellow-400"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                >
+                  <path
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                  />
+                </svg>
+                <span class="text-yellow-400">Limited Seats</span>
+              </div>
+            </div>
+
+            <p class="text-gray-400 mb-4">
+              Anyone eager to learn and earn more
+            </p>
+            <button
+              class="bg-[#4BA3F5] text-white px-8 py-3 rounded-full hover:bg-blue-600 transition"
+            >
+              Enrol Now
+            </button>
+          </div>
+
+          <!-- Right Content - 5 columns -->
+          <div
+            class="lg:col-span-5 lg:translate-y-[30%] absolute right-0 w-[400px] hidden lg:block"
+          >
+            <div class="bg-white rounded-xl p-1 shadow-lg">
+              <div
+                class="relative w-full aspect-video rounded-xl overflow-hidden"
+              >
+                <iframe
+                  class="absolute top-0 left-0 w-full h-full"
+                  src="https://www.youtube.com/embed/24QW_ZdcBNM"
+                  title="YouTube video player"
+                  frameborder="0"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                >
+                </iframe>
+              </div>
+              <div class="p-5">
+                <div class="text-left mb-6">
+                  <span class="text-3xl font-bold">₹2,499</span>
+                </div>
+
+                <button
+                  class="w-full bg-[#4BA3F5] text-white py-3 rounded-full mb-3 hover:bg-blue-600 transition"
+                >
+                  Join Now
+                </button>
+                <p class="text-center text-sm text-gray-500 mb-8">
+                  30-Day Money-Back Guarantee
+                </p>
+
+                <h3 class="font-semibold text-lg mb-4">
+                  This course includes:
+                </h3>
+                <div class="space-y-4">
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/on-demand.png"
+                      alt="on demand video"
+                      class="w-6 h-5"
+                    />
+                    <span>2.5 hours on-demand video</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/user.png"
+                      alt="assignments"
+                      class="w-6 h-5"
+                    />
+                    <span>Assignments</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/insta.png"
+                      alt="article"
+                      class="w-6 h-5"
+                    />
+                    <span>1 article</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/clock.png"
+                      alt="resources"
+                      class="w-6 h-5"
+                    />
+                    <span>10 downloadable resources</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/contract.png"
+                      alt="mobile"
+                      class="w-6 h-5"
+                    />
+                    <span>Access on mobile and TV</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/youtube.png"
+                      alt="access"
+                      class="w-6 h-5"
+                    />
+                    <span>Full lifetime access</span>
+                  </div>
+                  <div class="flex items-center gap-3">
+                    <img
+                      src="/public/course/clock.png"
+                      alt="certificate"
+                      class="w-6 h-5"
+                    />
+                    <span>Certificate of completion</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+<section class="bg-white py-4 lg:hidden">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <!-- Video Section - Left -->
+        <div class="relative aspect-video rounded-xl overflow-hidden shadow-lg">
+          <iframe
+            class="absolute top-0 left-0 w-full h-full"
+            src="https://www.youtube.com/embed/24QW_ZdcBNM"
+            title="YouTube video player"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+  
+        <!-- Content Section - Right -->
+        <div class="bg-white rounded-xl p-8">
+          <div class="text-left mb-6">
+            <span class="text-3xl font-bold">₹2,499</span>
+          </div>
+  
+          <button class="w-full bg-[#4BA3F5] text-white py-3 rounded-full mb-3 hover:bg-blue-600 transition">
+            Join Now
+          </button>
+          <p class="text-center text-sm text-gray-500 mb-8">
+            30-Day Money-Back Guarantee
+          </p>
+  
+          <h3 class="font-semibold text-lg mb-4">
+            This course includes:
+          </h3>
+          <div class="space-y-4">
+            <div class="flex items-center gap-3">
+              <img src="/public/course/on-demand.png" alt="on demand video" class="w-6 h-5" />
+              <span>2.5 hours on-demand video</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/public/course/user.png" alt="assignments" class="w-6 h-5" />
+              <span>Assignments</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/public/course/insta.png" alt="article" class="w-6 h-5" />
+              <span>1 article</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/public/course/clock.png" alt="resources" class="w-6 h-5" />
+              <span>10 downloadable resources</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/public/course/contract.png" alt="mobile" class="w-6 h-5" />
+              <span>Access on mobile and TV</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/public/course/youtube.png" alt="access" class="w-6 h-5" />
+              <span>Full lifetime access</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <img src="/public/course/clock.png" alt="certificate" class="w-6 h-5" />
+              <span>Certificate of completion</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+    <section>
+      <div class="container mx-auto px-4 mt-8 relative">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 py-4">
+            <!-- Why choose UAE Corporate Tax Section -->
+            <div class="container mx-auto px-4 pt-4 pb-16">
+              <h2 class="text-3xl font-bold mb-12">
+                Why choose UAE Corporate Tax
+              </h2>
+
+              <div
+                class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6 max-w-4xl"
+              >
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-[50px] border">
+                  <div class="flex flex-col gap-2">
+                    <div class="flex items-baseline gap-1">
+                      <span class="text-4xl font-bold">₹8-12</span>
+                      <span class="text-gray-600">Lakhs</span>
+                    </div>
+                    <p class="text-gray-600">
+                      Average Annual Professional Income Impact
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-[50px] border">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-4xl font-bold">40%</span>
+                    <p class="text-gray-600">
+                      40% Increase in Tax Compliance Jobs
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-[50px] border">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-4xl font-bold">2.5X</span>
+                    <p class="text-gray-600">
+                      Potential Professional Opportunity Expansion in Tax
+                      Domains
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-3xl p-[50px] border">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-4xl font-bold">50,000+</span>
+                    <p class="text-gray-600">
+                      Corporate Tax Advisory Roles Created
+                    </p>
+                  </div>
+                </div>
+
+                <!-- Card 5 -->
+                <div class="bg-white rounded-3xl p-[50px] border">
+                  <div class="flex flex-col gap-2">
+                    <span class="text-4xl font-bold">95%</span>
+                    <p class="text-gray-600">
+                      of Multinational Corporations Adapting to New Framework
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="container mx-auto">
+              <div class="p-4 rounded-lg">
+                <h2 class="text-2xl font-bold mb-8">Why Choose This Course?</h2>
+
+                <div class="space-y-6">
+                  <!-- Item 1 -->
+                  <div class="flex items-start gap-3">
+                    <svg
+                      class="w-5 h-5 mt-1 text-blue-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 6L9 17L4 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p class="text-gray-700">
+                      Transform Your Career: Equip yourself with in-demand
+                      skills to navigate the UAE Corporate Tax system
+                      confidently.
+                    </p>
+                  </div>
+
+                  <!-- Item 2 -->
+                  <div class="flex items-start gap-3">
+                    <svg
+                      class="w-5 h-5 mt-1 text-blue-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 6L9 17L4 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p class="text-gray-700">
+                      Comprehensive Content: Dive deep into key topics like
+                      taxable income, compliance, exemptions, and penalties.
+                    </p>
+                  </div>
+
+                  <!-- Item 3 -->
+                  <div class="flex items-start gap-3">
+                    <svg
+                      class="w-5 h-5 mt-1 text-blue-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 6L9 17L4 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p class="text-gray-700">
+                      Expert-Led Training: Learn directly from John Tomy ACCA, a
+                      seasoned tax professional with years of real-world
+                      experience.
+                    </p>
+                  </div>
+
+                  <!-- Item 4 -->
+                  <div class="flex items-start gap-3">
+                    <svg
+                      class="w-5 h-5 mt-1 text-blue-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 6L9 17L4 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p class="text-gray-700">
+                      Globally Recognized Certification: Validate your expertise
+                      with a certificate from Elance Plus after completing the
+                      course and passing the final assessment.
+                    </p>
+                  </div>
+
+                  <!-- Item 5 -->
+                  <div class="flex items-start gap-3">
+                    <svg
+                      class="w-5 h-5 mt-1 text-blue-500"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M20 6L9 17L4 12"
+                        stroke="currentColor"
+                        stroke-width="2"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                      />
+                    </svg>
+                    <p class="text-gray-700">
+                      No Experience Required: Beginner or expert, this course is
+                      designed for anyone eager to learn.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-5"></div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 py-4">
+            <div class="container mx-auto">
+              <div class="max-w-3xl p-8">
+                <h2 class="text-3xl font-bold mb-10">What You'll Learn</h2>
+
+                <div class="space-y-12">
+                  <div id="initial-items">
+                    <!-- Item 1 -->
+                    <div class="flex gap-6 border-b pb-6 mb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          1
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Learn the Fundamentals of UAE Corporate Tax Law and
+                          Its Applicability
+                        </h3>
+                        <p class="text-gray-600">
+                          Understand the scope, purpose, and importance of UAE
+                          Corporate Tax Law and how it applies to businesses
+                          operating in the UAE.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 2 -->
+                    <div class="flex gap-6 border-b pb-6 mb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          2
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Learn the Key Definitions and General Provisions of
+                          UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Familiarize yourself with the essential terms and
+                          provisions, including definitions such as "taxable
+                          person" and the scope of the tax system.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 3 -->
+                    <div class="flex gap-6 border-b pb-6 mb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          3
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Learn How to Calculate Taxable Income under UAE
+                          Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Master the process of calculating taxable income by
+                          factoring in business revenue, allowable deductions,
+                          and any applicable exemptions.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Hidden items -->
+                  <div id="hidden-items" class="hidden space-y-12">
+                    <!-- Item 4 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          4
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Provisions Related to Exempt Persons in
+                          UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Gain a clear understanding of which individuals and
+                          entities are considered exempt from corporate tax in
+                          the UAE.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 5 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          5
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Taxability of Different Types of
+                          Persons under UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Learn how the taxability differs based on the type of
+                          person—whether they are individuals, corporations, or
+                          non-residents.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 6 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          6
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Concept of Residential Person as per
+                          UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Learn the criteria for determining an entity's status
+                          as a "resident person" and how it impacts their tax
+                          obligations.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 7 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          7
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Learn How to Calculate Taxable Income of Resident and
+                          Non-Resident Persons
+                        </h3>
+                        <p class="text-gray-600">
+                          Understand the differences in calculating taxable
+                          income for residents and non-residents under UAE
+                          Corporate Tax Law.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 8 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          8
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Taxability of Permanent Establishment
+                          under UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Learn what constitutes a Permanent Establishment and
+                          its tax base, including the rules for taxing
+                          businesses with PE in the UAE.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 9 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          9
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Taxability of Permanent Establishment
+                          under UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Learn what constitutes a Permanent Establishment and
+                          its tax base, including the rules for taxing
+                          businesses with PE in the UAE.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 10 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          10
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Provisions of UAE Sourced Income under
+                          UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Learn what qualifies as UAE-sourced income and how it
+                          is taxed under the UAE Corporate Tax system.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 11 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          11
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Taxation of UAE Free Zone Entities
+                          under UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Explore the specific rules and benefits for businesses
+                          operating in UAE Free Zones regarding corporate tax.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 12 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          12
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Learn How to Calculate Corporate Tax Payable under UAE
+                          Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Master the methods for calculating corporate tax
+                          payable based on taxable income.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Item 13 -->
+                    <div class="flex gap-6 border-b pb-6">
+                      <div class="flex-shrink-0">
+                        <div
+                          class="w-10 h-10 rounded-full border-2 border-gray-200 flex items-center justify-center text-gray-500"
+                        >
+                          13
+                        </div>
+                      </div>
+                      <div>
+                        <h3 class="text-xl font-semibold mb-2">
+                          Understand the Concepts of Payment & Refund of
+                          Corporate Tax under UAE Corporate Tax Law
+                        </h3>
+                        <p class="text-gray-600">
+                          Learn about the procedures for corporate tax payments,
+                          deadlines, and how to apply for tax refunds if
+                          applicable.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Show More button -->
+                  <div class="text-left">
+                    <button
+                      id="show-more-btn"
+                      class="bg-blue-500 text-white px-6 py-4 rounded-full hover:bg-blue-600 transition"
+                    >
+                      Show More
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 py-4">
+            <div class="container mx-auto px-4 py-8">
+              <h2 class="text-3xl font-bold mb-4">Who Should Enroll?</h2>
+              <p class="text-gray-700 mb-8">This course is perfect for:</p>
+              <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <!-- Card 1 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border">
+                  <div class="items-start gap-4">
+                    <img
+                      src="/public/money-bag.png"
+                      alt=""
+                      class="w-8 h-8 mb-3"
+                    />
+                    <div>
+                      <h3 class="text-xl font-bold mb-2">
+                        Finance and Tax Professionals
+                      </h3>
+                      <p class="text-gray-600">
+                        Stay competitive with updated tax knowledge.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border">
+                  <div class="items-start gap-4">
+                    <img
+                      src="/public/businessman.png"
+                      alt=""
+                      class="w-8 h-8 mb-3"
+                    />
+                    <div>
+                      <h3 class="text-xl font-bold mb-2">
+                        Entrepreneurs & Business Owners
+                      </h3>
+                      <p class="text-gray-600">
+                        Understand your tax obligations and optimize compliance.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border">
+                  <div class="items-start gap-4">
+                    <img
+                      src="/public/graduated.png"
+                      alt=""
+                      class="w-8 h-8 mb-3"
+                    />
+                    <div>
+                      <h3 class="text-xl font-bold mb-2">
+                        Students & Aspiring Tax Specialists
+                      </h3>
+                      <p class="text-gray-600">
+                        Build a strong foundation for a career in UAE Corporate
+                        Tax.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Card 4 -->
+                <div class="bg-white rounded-3xl p-6 shadow-sm border">
+                  <div class="items-start gap-4">
+                    <img
+                      src="/public/executive.png"
+                      alt=""
+                      class="w-8 h-8 mb-3"
+                    />
+                    <div>
+                      <h3 class="text-xl font-bold mb-2">
+                        Corporate Executives
+                      </h3>
+                      <p class="text-gray-600">
+                        Learn how to manage corporate tax matters effectively.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+        <div class="container mx-auto">
+          <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 py-4">
+              <div class="container mx-auto px-4 py-8">
+                <h2 class="text-2xl font-bold mb-8">Your Course Roadmap</h2>
+  
+                <div id="initial-items-module">
+                  <!-- Module 1 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 1: Introduction to UAE Corporate Tax
+                        <span class="text-gray-500 font-normal">(0.5 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <!-- Overview section -->
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Overview of Corporate Tax
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Definition and significance of Corporate Tax.
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Legislative framework: Federal Decree-Law No. 60 of
+                              2023, amending Federal Decree-Law No. 47 of 2022.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- Objectives section -->
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Objectives and Scope</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Objectives: Cementing UAE's position as a global
+                              business hub, accelerating development, and meeting
+                              international standards.
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Scope: Applicability to all businesses with a
+                              commercial license, including free zone entities and
+                              foreign entities conducting trade.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- Key Definitions section -->
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Key Definitions and Terms
+                        </h4>
+                        <div class="flex items-start gap-2">
+                          <svg
+                            class="w-5 h-5 text-blue-500 mt-0.5"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                            />
+                          </svg>
+                          <p class="text-gray-600">
+                            Definitions of important terms such as Taxable Income,
+                            Exempt Person, and Corporate Tax.
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Module 2 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 2: General Provisions
+                        <span class="text-gray-500 font-normal">(0.5 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Important Definitions</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Key terms related to corporate tax.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Types of Taxable and Exempt Persons
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Overview of tax subjects and exemptions.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Module 3 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 3: Imposition and Applicable Rates
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Tax Rates and Thresholds</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Understanding the 9% standard rate and 0% threshold.
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div id="hidden-items-module" class="hidden space-y-12">
+                  <!-- Module 4 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 4: Exempt Persons and Exempt Income
+                        <span class="text-gray-500 font-normal">(1.5 hours)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <!-- Categories of Exempt Persons -->
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Categories of Exempt Persons
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">Government Entities</p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Extractive and Non-Extractive Natural Resource
+                              Businesses
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Qualifying Public Benefit Entities
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Qualifying Mutual Funds and Pension Funds
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- Types of Exempt Income -->
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Types of Exempt Income</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Conditions for Exempt Income
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+  
+                      <!-- Application Process -->
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Application for Exemption and Compliance
+                        </h4>
+                        <div class="flex items-start gap-2">
+                          <svg
+                            class="w-5 h-5 text-blue-500 mt-0.5"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                          >
+                            <path
+                              d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                            />
+                          </svg>
+                          <p class="text-gray-600">
+                            Process and requirements for obtaining exemption
+                            status
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 5 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 5: Taxable Persons and Corporate Tax Base
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Determining Taxable Persons
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Resident vs. Non-Resident Classification
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Permanent Establishment in the UAE
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              State-Sourced Income Definition
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 6 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 6: Free Zone Persons
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Free Zone Regulations</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Eligibility for Free Zone Exemptions
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Criteria for Qualifying Free Zone Persons
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 7 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 7: Calculating Taxable Income
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Income Calculation Methods
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              General Rules for Determining Taxable Income
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Adjustments, Deductions, and Reliefs
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 8 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 8: Reliefs
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Types of Relief</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Transfers Within a Qualifying Group
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Business Restructuring Relief
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 9 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 9: Deductions and Allowable Expenses
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Overview of Deductible Expenses
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Types of allowable business expenses
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Conditions for deductibility
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Documentation requirements
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 10 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 10: Transactions with Related Parties
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Transfer Pricing Rules</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Understanding arm's length principle
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Documentation requirements for related party
+                              transactions
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 11 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 11: Tax Losses and Carry-Forward Rules
+                        <span class="text-gray-500 font-normal">(0.5 hours)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Understanding Tax Losses</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Rules for carrying forward losses
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Limitations and restrictions
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 12 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 12: Tax Groups
+                        <span class="text-gray-500 font-normal">(0.5 hours)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Tax Group Formation</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Requirements for forming a tax group
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Benefits and obligations of tax groups
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <!-- Module 13 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 13: Withholding Tax and Foreign Tax Credits
+                        <span class="text-gray-500 font-normal">(0.5 hours)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">
+                          Understanding Withholding Tax
+                        </h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Withholding tax requirements and rates
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Foreign tax credit mechanisms
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 14 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 14: Administrative Procedures and Compliance
+                        <span class="text-gray-500 font-normal">(1 hour)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Compliance Requirements</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">Registration procedures</p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Filing requirements and deadlines
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Record-keeping obligations
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Penalties and administrative fines
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 15 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 15: Case Studies and Practical Examples
+                        <span class="text-gray-500 font-normal">(2 hours)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Practical Applications</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Real-world scenarios and solutions
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">Calculation exercises</p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Common challenges and solutions
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+  
+                  <!-- Module 16 -->
+                  <div class="module-container mb-8">
+                    <div class="flex items-center gap-4 mb-4">
+                      <button
+                        class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                      >
+                        <svg
+                          class="w-4 h-4"
+                          viewBox="0 0 24 24"
+                          fill="none"
+                          stroke="currentColor"
+                        >
+                          <path
+                            stroke-linecap="round"
+                            stroke-linejoin="round"
+                            stroke-width="2"
+                            d="M12 6v12m6-6H6"
+                          />
+                        </svg>
+                      </button>
+                      <h3 class="text-lg font-semibold">
+                        Module 16: Summary and Course Conclusion
+                        <span class="text-gray-500 font-normal">(0.5 hours)</span>
+                      </h3>
+                    </div>
+  
+                    <div class="module-content hidden ml-10">
+                      <div class="mb-6">
+                        <h4 class="font-medium mb-3">Course Wrap-up</h4>
+                        <div class="space-y-3">
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">Key takeaways and summary</p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Next steps and continuous learning
+                            </p>
+                          </div>
+                          <div class="flex items-start gap-2">
+                            <svg
+                              class="w-5 h-5 text-blue-500 mt-0.5"
+                              viewBox="0 0 24 24"
+                              fill="currentColor"
+                            >
+                              <path
+                                d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41L9 16.17z"
+                              />
+                            </svg>
+                            <p class="text-gray-600">
+                              Final assessment preparation
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="text-left mt">
+                  <button
+                    id="show-more-btn-module"
+                    class="bg-blue-500 text-white px-6 py-4 rounded-full hover:bg-blue-600 transition"
+                  >
+                    Show More
+                  </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 py-4">
+            <section class="py-16">
+              <div class="container mx-auto px-4">
+                <!-- Heading -->
+                <h2 class="text-3xl font-bold mb-12">Why Act Now?</h2>
+
+                <!-- Grid Container -->
+                <div
+                  class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 gap-6"
+                >
+                  <!-- Card 1 -->
+                  <div class="bg-white border rounded-3xl p-8">
+                    <div class="space-y-4">
+                      <!-- Icon -->
+                      <div class="text-4xl">⭐</div>
+                      <!-- Title -->
+                      <h3 class="text-xl font-semibold">
+                        Exclusive Certification
+                      </h3>
+                      <!-- Description -->
+                      <p class="text-gray-600">
+                        Enhance your career prospects with a recognized
+                        qualification.
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 2 -->
+                  <div class="bg-white border rounded-3xl p-8">
+                    <div class="space-y-4">
+                      <!-- Icon -->
+                      <div class="text-4xl">⌛</div>
+                      <!-- Title -->
+                      <h3 class="text-xl font-semibold">
+                        Time-Sensitive Knowledge
+                      </h3>
+                      <!-- Description -->
+                      <p class="text-gray-600">
+                        UAE Corporate Tax regulations are evolving—be prepared!
+                      </p>
+                    </div>
+                  </div>
+
+                  <!-- Card 3 -->
+                  <div class="bg-white border rounded-3xl p-8">
+                    <div class="space-y-4">
+                      <!-- Icon -->
+                      <div class="text-4xl">🚀</div>
+                      <!-- Title -->
+                      <h3 class="text-xl font-semibold">
+                        Limited Seats Available
+                      </h3>
+                      <!-- Description -->
+                      <p class="text-gray-600">
+                        Join a community of professionals and future tax
+                        experts.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 py-4">
+            <div class="container mx-auto px-4 py-8">
+              <h2 class="text-2xl font-bold mb-8">
+                Frequently Asked Questions
+              </h2>
+
+              <div class="module-container mb-8">
+                <div class="flex items-center gap-4 mb-4">
+                  <button
+                    class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6v12m6-6H6"
+                      />
+                    </svg>
+                  </button>
+                  <h3 class="text-lg font-semibold">
+                    Do I need prior tax knowledge?
+                  </h3>
+                </div>
+
+                <div class="module-content hidden ml-10">
+                  No! This course is designed for both beginners and
+                  professionals.
+                </div>
+              </div>
+
+              <div class="module-container mb-8">
+                <div class="flex items-center gap-4 mb-4">
+                  <button
+                    class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6v12m6-6H6"
+                      />
+                    </svg>
+                  </button>
+                  <h3 class="text-lg font-semibold">Is there certification?</h3>
+                </div>
+
+                <div class="module-content hidden ml-10">
+                    Yes! Pass the final assessment to earn the Mastering UAE Corporate Tax Certification from Elance Plus. 
+                </div>
+              </div>
+
+              <div class="module-container">
+                <div class="flex items-center gap-4 mb-4">
+                  <button
+                    class="module-toggle w-6 h-6 rounded-full border-2 border-gray-300 flex items-center justify-center"
+                  >
+                    <svg
+                      class="w-4 h-4"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      stroke="currentColor"
+                    >
+                      <path
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                        stroke-width="2"
+                        d="M12 6v12m6-6H6"
+                      />
+                    </svg>
+                  </button>
+                  <h3 class="text-lg font-semibold">How can I enroll?</h3>
+                </div>
+
+                <div class="module-content hidden ml-10">
+                    Click below to download the brochure and enroll in just a few steps.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="container mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+          <div class="lg:col-span-7 py-4">
+            <section class="py-16">
+              <div class="container mx-auto px-4 relative">
+                <!-- Heading -->
+                <h2 class="text-3xl font-bold mb-4">Don't Miss Out!</h2>
+
+                <!-- Description -->
+                <p class="text-gray-600 mb-8 max-w-2xl">
+                  The UAE tax landscape is changing—are you ready to adapt and
+                  thrive? This masterclass equips you with everything you need
+                  to navigate corporate tax with confidence.
+                </p>
+
+                <!-- Gradient Card -->
+                <div
+                  class="bg-gradient-to-r from-[#6366F1] to-[#38BDF8] rounded-3xl p-8 max-w-2xl relative py-16"
+                >
+                  <img
+                    src="/public/logo-transparent.png"
+                    class="w-24 h-24 absolute right-8 top-16"
+                  />
+
+                  <div class="space-y-6">
+                    <!-- Card Title -->
+                    <h3 class="text-2xl font-bold text-white leading-tight">
+                      Enroll Now and become a UAE<br />Corporate Tax expert!
+                    </h3>
+
+                    <!-- Button -->
+                    <button
+                      class="bg-white text-gray-800 px-6 py-2 rounded-full font-medium hover:bg-gray-100 transition"
+                    >
+                      Enroll Now
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+      </div>
+    </section>
+    <script>
+      document
+        .getElementById("show-more-btn")
+        .addEventListener("click", function () {
+          const hiddenItems = document.getElementById("hidden-items");
+          const button = document.getElementById("show-more-btn");
+
+          if (hiddenItems.classList.contains("hidden")) {
+            hiddenItems.classList.remove("hidden");
+            button.textContent = "Show Less";
+          } else {
+            hiddenItems.classList.add("hidden");
+            button.textContent = "Show More";
+          }
+        });
+    </script>
+    <script>
+      document
+        .getElementById("show-more-btn-module")
+        .addEventListener("click", function () {
+          const hiddenItems = document.getElementById("hidden-items-module");
+          const button = document.getElementById("show-more-btn-module");
+
+          if (hiddenItems.classList.contains("hidden")) {
+            hiddenItems.classList.remove("hidden");
+            button.textContent = "Show Less";
+          } else {
+            hiddenItems.classList.add("hidden");
+            button.textContent = "Show More";
+          }
+        });
+    </script>
+  </body>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({ duration: 1000 });
+  </script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script>
+    feather.replace();
+  </script>
+</html>
